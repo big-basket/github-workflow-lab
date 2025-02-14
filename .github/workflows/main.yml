@@ -20,4 +20,4 @@ jobs:
           source venv/bin/activate
           pytest
       - name: Deploy Application
-        run: echo "Deploying application...
+        run: echo "Deploying application..."
