@@ -4,6 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Use Secret Key
+        run: echo "Using secret key:${{ secrets.DEPLOYMENT_KEY }}" 
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Set up Python
@@ -20,4 +22,4 @@ jobs:
           source venv/bin/activate
           pytest
       - name: Deploy Application
-        run: echo "Deploying application...
+        run: echo "Deploying application..."
